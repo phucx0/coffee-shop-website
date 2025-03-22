@@ -1,4 +1,4 @@
-type ProductCardType = {
+type ProductType = {
     productId: string,
     productName: string,
     productType: string,
