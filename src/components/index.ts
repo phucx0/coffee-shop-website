@@ -11,7 +11,6 @@ export { NotificationManager } from "./NotificationManager";
 export { TabBar } from "./Layout/TabBar";
 // export { default as DrinkListSwiper } from "./Sections/DrinkListSwiper";
 export { default as BannerSwiper } from "./BannerSwiper";
-// export { default as BestSeller } from "./Sections/BestSeller";
 export { Section } from "./Section";
 export { default as Cart } from "./Cart";
 export { Input } from "./UI/Input";
