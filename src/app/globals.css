@@ -1,21 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display+SC&display=swap');
+/* @import 'hero-ui/dist/hero-ui.css'; */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1C1C1C;
+  --fontTitle: 32px;
+  --fontContent: 12px;
+
+  --fontBodyLarge: 16px;
+  --fontBodyMedium: 14px;
+  --fontBodySmall: 12px;
+
+  --fontCaption: 12px;
+  --fontLabel: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+::-webkit-scrollbar {
+  display: none;
 }
+
 
 body {
-  color: var(--foreground);
+  /* color: var(--foreground); */
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", serif;
 }
+
+@media (max-width: 674px) {
+  :root {
+    --fontTitle: 32px;
+    --fontContent: 12px;
+  
+    --fontBodyLarge: 14px;
+    --fontBodyMedium: 13px;
+    --fontBodySmall: 11px;
+  
+    --fontCaption: 12px;
+    --fontLabel: 10px;
+  }
+  
+}
+
+

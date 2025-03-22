@@ -1,0 +1,22 @@
+.card-ctn{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.116);
+}
+
+.card-details{
+    opacity: 0;
+}
+
+.card-details {
+    opacity: 0; /* Mặc định ẩn */
+    transition: opacity 600ms cubic-bezier(0.075, 0.82, 0.165, 1); /* Hiệu ứng mượt mà */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Khi hover trên .card-img */
+.card-img:hover .card-details {
+    opacity: 1; /* Hiển thị khi hover */
+}
+

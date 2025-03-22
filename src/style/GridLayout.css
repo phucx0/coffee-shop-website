@@ -1,0 +1,32 @@
+.container {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px 8px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "a a b d"
+    "a a c d";
+}
+
+.b { grid-area: b; }
+
+.c { grid-area: c; }
+
+.a { grid-area: a; }
+
+.d { grid-area: d; }
+
+@media (max-width: 640px) {
+  .container {  
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 cột */
+    grid-template-rows: auto;
+    gap: 12px;
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d d"; /* D chiếm hết hàng */
+  }
+}

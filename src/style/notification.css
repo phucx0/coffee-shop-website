@@ -1,0 +1,49 @@
+.notification-inner {
+    display: flex;
+    justify-content: end;
+    animation: 4500ms notification cubic-bezier(.57,.31,.13,1.27) forwards;
+}
+
+.notification-inner.close {
+    animation: 1000ms notificationClose cubic-bezier(.57,.31,.13,1.27) forwards;
+}
+
+@keyframes notification {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    90% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes notificationClose {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+
+
+@media (max-width: 640px) {
+    .notification-inner{
+        align-items: center;
+        justify-content: center;
+    }
+    
+}

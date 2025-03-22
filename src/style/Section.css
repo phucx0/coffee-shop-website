@@ -1,0 +1,9 @@
+.section-inner {
+    width: 60%;
+}
+
+@media (max-width: 674px) {
+    .section-inner {
+        width: 95%;
+    }
+}

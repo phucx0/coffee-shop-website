@@ -1,0 +1,38 @@
+
+.CartInner{
+    animation: 600ms animationCartPannel cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes animationCartPannel {
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 640px) {
+    .Cart-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Cart-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+        backdrop-filter: brightness(0.5); /* Điều chỉnh độ sáng của backdrop */
+        z-index: -1; /* Đặt phần tử này dưới các phần tử khác */
+    }
+    .CartInner{
+        width: 100%;
+        height: 100%;
+    }
+}

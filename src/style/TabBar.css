@@ -1,0 +1,31 @@
+.TabBar {
+    /* animation: 600ms TabBarClose cubic-bezier(0.075, 0.82, 0.165, 1) forwards; */
+    transition: all;
+}
+
+.TabBar.open {
+    animation: 600ms TabBarOpen cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+
+@keyframes TabBarOpen {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes TabBarClose {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}

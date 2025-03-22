@@ -1,0 +1,38 @@
+.ItemCustomization-inner{
+    animation: animateDrinkPanel 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, opacity;
+}
+
+@keyframes animateDrinkPanel {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 640px) {
+    .ItemCustomization-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ItemCustomization-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+        backdrop-filter: brightness(0.5); /* Điều chỉnh độ sáng của backdrop */
+        z-index: -1; /* Đặt phần tử này dưới các phần tử khác */
+    }
+    .ItemCustomization-inner {
+        height: 100%;
+        width: 100%;
+    }
+}
