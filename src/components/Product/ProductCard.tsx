@@ -2,10 +2,10 @@
 
 import { useRouter } from "next/navigation"
 
-export const ProductCard = (item : ProductCardType) =>{
+export const ProductCard = (item : ProductType) =>{
     const router = useRouter()
     const handleNavigate = (categoryName : string) => {
-        router.push(`/menu/${categoryName.toLowerCase()}/${item.productType.toLowerCase().replace(/\s+/g, "-")}/${item.productName.toLowerCase().replace(/\s+/g, "-")}`)
+        router.push(`/menu/product/${item.productId}`)
     }
     return(
         <div
